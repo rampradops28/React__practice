@@ -1,5 +1,5 @@
 import React from 'react' 
-import img from '../about.png'
+import img from '../assets/about.png'
 const Aboutus = () => {
   return (
     <div className='about'>

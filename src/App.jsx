@@ -3,10 +3,10 @@ import {BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Aboutus from "./components/Aboutus";
 import Contactus from "./components/Contactus";
-import './App.css'
-import './Home.css'
-import './About.css'
-import logo from './bg.webp'
+import './css/App.css'
+import './css/Home.css'
+import './css/About.css'
+import logo from './assets/bg.webp'
 function App() {
   return (
     <>
