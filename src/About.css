@@ -1,0 +1,12 @@
+img{
+    height:400px;
+    width:400px;
+}
+
+div .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

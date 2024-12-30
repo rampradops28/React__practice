@@ -1,31 +1,59 @@
-import { Component } from "react" 
+import React from "react";
+import {BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Aboutus from "./components/Aboutus";
+import Contactus from "./components/Contactus";
 import './App.css'
-import Slambook from "./Slambook.jsx"
+import './Home.css'
+import './About.css'
+import logo from './bg.webp'
+function App() {
+  return (
+    <>
+    <Router>
+      <div className="header">
+        <div className="logo">
+          <p><Link to="/">
+          <img src={logo} alt="#"  className="rb-logo"/>
+          </Link>
+          </p>
+           
+          <h3>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              RESUME BUILDER
+            </Link>
+          </h3>
+        </div>
+        <nav>
+          <ol>
+            <li>
+              <Link to="/"  style={{ textDecoration: "none" }}>Home</Link>
+            </li>
+            <li>
+              <Link to="/aboutUs"  style={{ textDecoration: "none" }}>About Us</Link>
+            </li>
+            <li>
+              <Link to="/contactUs"  style={{ textDecoration: "none" }}>Contact Us</Link>
+            </li>
+          </ol>
+        </nav>
+      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<Aboutus />} />
+          <Route path="/contactUs" element={<Contactus />} />
+        </Routes>
 
-class App extends Component{
-
-  render(){
-    return(
-      <> 
-         <Slambook></Slambook>
-      </>
-    )
-  }
+        <footer>
+          <h2>&copy; CopyRights Reserved! 2024 </h2>
+        </footer>
+      
+      
+      
+    </Router>
+       
+    </>
+  );
 }
 
-export default App
-
-// 
-// import Form from './Form.jsx'
-// function App() { 
-
-//   return (
-//     <>
-        
-//        <Form></Form>
-       
-//     </>
-//   )
-// }
-
-// export default App
+export default App;
