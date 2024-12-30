@@ -1,8 +1,10 @@
  import React from 'react'
  
- const Fun = () => {
+ const Fun = (props) => {
    return (
-     <div>Fun</div>
+      <div>
+        <h1>{props.name} Everyone!</h1>
+      </div>
    )
  }
  

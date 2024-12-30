@@ -1,5 +1,4 @@
-import { Component } from "react"
-import Form from './Form.jsx'
+import { Component } from "react" 
 import './App.css'
 import Slambook from "./Slambook.jsx"
 
