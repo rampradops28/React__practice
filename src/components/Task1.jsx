@@ -30,8 +30,8 @@ const Task1 = () => {
                   <dd>
                     <ul style={{listStyleType: "none"}}>
                       <li><span>#</span> PARROT</li>
-                      <li><span>$</span> PEACOCK</li>
-                      <li><span>&</span> PEGION</li> 
+                      <li><span>#</span> PEACOCK</li>
+                      <li><span>#</span> PEGION</li> 
                     </ul> 
                   </dd>
                 </dl>
