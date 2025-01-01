@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { nameContext } from '../Ram'
+import Halfboil from './Halfboil'
 
-const Stomach = ({name}) => {
+const Stomach = () => {
+ let{color,bg} = useContext(nameContext)
   return (
      <>
-        <h1>Stomach Component : {name}</h1>
-        
+        <h1 style={{color: color , backgroundColor: bg}}>Stomach</h1>
      </>
   )
 }

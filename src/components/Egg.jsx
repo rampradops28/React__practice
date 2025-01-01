@@ -1,12 +1,12 @@
 import React from 'react'
 import Halfboil from './Halfboil'
 
-const Egg = ({name}) => {
+const Egg = () => {
   return (
 
      <>
-        <h1>Egg Component</h1>
-        <Halfboil name={name}/>
+       
+        <Halfboil />
      </>
   )
 }
