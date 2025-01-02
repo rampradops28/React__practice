@@ -52,7 +52,7 @@ const Ram = () => {
 
         <input type="numebr" value={num} onChange={(e) => setNum(e.target.value)} />
         <button onClick={() => setDark((val) => !val)}>Change Theme</button>
-        <div style={themeStyle} > {doubleNum}></div>
+        <div style={themeStyle}> {doubleNum}</div>
 
         {/* <Dog name = {name} no = {no}/> */}
         {/* <h3>Message From child Component: {msg}</h3>

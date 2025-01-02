@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Aboutus from "./components/Aboutus";
 import Contactus from "./components/Contactus";
+import Params from "./components/Params";
 import './css/App.css'
 import './css/Home.css'
 import './css/About.css'
-import logo from './assets/bg.webp'
+import logo from './assets/bg.webp' 
+
 function App() {
   return (
     <>
@@ -42,6 +44,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<Aboutus />} />
           <Route path="/contactUs" element={<Contactus />} />
+          <Route path="/params/:id" element={<Params />} />
         </Routes>
 
         <footer>
