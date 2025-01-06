@@ -6,6 +6,7 @@ import Task1 from './components/Task1'
 import Effect from './components/Effect'
 import Ref from './components/Ref'
 import Hen from './components/Hen'
+import Imagegallery from './components/Imagegallery'
 
 export let nameContext = createContext();
 
@@ -20,27 +21,27 @@ const Ram = () => {
     //   setMsg(val);
     // }
 
-    const[num, setNum] = useState(0)
-    const[dark, setDark] = useState(false)
-//usememo => 
-    // let doubleNum = slowFunc(num)
-    let doubleNum = useMemo(() => {
-      return slowFunc(num)
-    },[num])
+//     const[num, setNum] = useState(0)
+//     const[dark, setDark] = useState(false)
+// //usememo => 
+//     // let doubleNum = slowFunc(num)
+//     let doubleNum = useMemo(() => {
+//       return slowFunc(num)
+//     },[num])
 
-    let themeStyle = useMemo(() => {
-      return{
-      backgroundColor : dark ? "black" : "white",
-      color : dark ? "white" : "black"
-      }
-    },[dark])
-    // const[bg, setBg] = useState("white")
-    // const[color, setColor] = useState("black")
+//     let themeStyle = useMemo(() => {
+//       return{
+//       backgroundColor : dark ? "black" : "white",
+//       color : dark ? "white" : "black"
+//       }
+//     },[dark])
+    const[bg, setBg] = useState("white")
+    const[color, setColor] = useState("black")
     
-    // function click(){
-    //   setBg(bg === "white" ? "black" : "white")
-    //   setColor(color === "black" ? "white" : "black")
-    // }
+    function click(){
+      setBg(bg === "white" ? "black" : "white")
+      setColor(color === "black" ? "white" : "black")
+    }
 
    
   return (
@@ -50,9 +51,9 @@ const Ram = () => {
           <Hen />
         </nameContext.Provider> */}
 
-        <input type="numebr" value={num} onChange={(e) => setNum(e.target.value)} />
+        {/* <input type="numebr" value={num} onChange={(e) => setNum(e.target.value)} />
         <button onClick={() => setDark((val) => !val)}>Change Theme</button>
-        <div style={themeStyle}> {doubleNum}</div>
+        <div style={themeStyle}> {doubleNum}</div> */}
 
         {/* <Dog name = {name} no = {no}/> */}
         {/* <h3>Message From child Component: {msg}</h3>
@@ -61,6 +62,7 @@ const Ram = () => {
         {/* <Task1 /> */}
         {/* <Effect /> */}
         {/* <Ref /> */}
+        <Imagegallery />
         {/* <nameContext.Provider  value={{name: "Chicken",age: 10,location: "erode"}}>
               <Hen />
         </nameContext.Provider> */}
